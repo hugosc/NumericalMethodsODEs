@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,12 +89,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="classedo__solver.html">edo_solver</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>edo_solver</b>()=0 (defined in <a class="el" href="classedo__solver.html">edo_solver</a>)</td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~edo_solver</b>()=0 (defined in <a class="el" href="classedo__solver.html">edo_solver</a>)</td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classedo__solver.html#a26ff3817234fabeff884cd5b5df4b5b3">_problem</a></td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classedo__solver.html#ac5771dc25a99d2b73351dd4fd92bd965">_solutions</a></td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classedo__solver.html#abe199d73bd5503e3e102c01aad7f5ae6">_step_size</a></td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classedo__solver.html#ab01c05ea6b194400ab29444d330cb228">approx_point</a>(double t)=0</td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classedo__solver.html#ab11f9b98cd1e0909df17dd5f6fd5fc96">edo_solver</a>(initval_problem problem, double sz)</td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classedo__solver.html#a890420418070ca1f178b80a6f907dcd7">epsilon</a></td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classedo__solver.html#a88fdf804b54339839941ba98816daed2">set_step_size</a>(double sz)</td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classedo__solver.html#ab9e84eb1d7c2c42f34cfe2629f84b316">solve</a>(interval time_interval)</td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classedo__solver.html#a5d608f46fb2a287843667abcddba0444">step_size</a>()</td><td class="entry"><a class="el" href="classedo__solver.html">edo_solver</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 6 2015 00:33:16 for NumericalMethodsODEs by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 6 2015 19:07:33 for NumericalMethodsODEs by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

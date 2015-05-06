@@ -7,11 +7,13 @@
 
 var indexSectionsWithContent =
 {
-  0: "ert",
-  1: "e",
-  2: "e",
-  3: "r",
-  4: "t"
+  0: "_aefirst",
+  1: "ei",
+  2: "et",
+  3: "aeis",
+  4: "_efs",
+  5: "r",
+  6: "t"
 };
 
 var indexSectionNames =
@@ -19,8 +21,10 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "files",
-  3: "typedefs",
-  4: "pages"
+  3: "functions",
+  4: "variables",
+  5: "typedefs",
+  6: "pages"
 };
 
 function convertToId(search)
