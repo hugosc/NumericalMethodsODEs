@@ -1,3 +1,6 @@
+#ifndef EDOSOLVER_H
+#define EDOSOLVER_H
+
 #include <functional>
 
 /**
@@ -23,4 +26,6 @@ class edo_solver {
 		virtual  edo_solver() = 0;
 		virtual ~edo_solver() = 0;
 	protected:	
-}
+};
+
+#endif //EDOSOLVER_H
