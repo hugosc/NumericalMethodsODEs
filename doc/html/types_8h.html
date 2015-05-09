@@ -96,11 +96,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>definition of important types, such as real functions(realfunc) and Initial Value Problem(initval_problem)  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;functional&gt;</code><br/>
+<code>#include &lt;vector&gt;</code><br/>
+<code>#include &lt;utility&gt;</code><br/>
+<code>#include &lt;initializer_list&gt;</code><br/>
 </div>
 <p><a href="types_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structinterval.html">interval</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct to represent a closed interval  <a href="structinterval.html#details">More...</a><br/></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinitval__problem.html">initval_problem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">class to represent an initial value problem  <a href="classinitval__problem.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,13 +117,18 @@ Typedefs</h2></td></tr>
 typedef std::function&lt; double(double)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#ace3a1feed10e14042e639a9619476779">realfunc</a></td></tr>
 <tr class="memdesc:ace3a1feed10e14042e639a9619476779"><td class="mdescLeft">&#160;</td><td class="mdescRight">A lambda function that receives and returns a double is used to represent a real function. <br/></td></tr>
 <tr class="separator:ace3a1feed10e14042e639a9619476779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83bffc26c6ed4d30b41d0c2558e54b09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83bffc26c6ed4d30b41d0c2558e54b09"></a>
+typedef std::function&lt; double(double, <br class="typebreak"/>
+double)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="types_8h.html#a83bffc26c6ed4d30b41d0c2558e54b09">diff_equation</a></td></tr>
+<tr class="memdesc:a83bffc26c6ed4d30b41d0c2558e54b09"><td class="mdescLeft">&#160;</td><td class="mdescRight">explicit differential equation <br/></td></tr>
+<tr class="separator:a83bffc26c6ed4d30b41d0c2558e54b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>definition of important types, such as real functions(realfunc) and Initial Value Problem(initval_problem) </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 6 2015 19:07:33 for NumericalMethodsODEs by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 9 2015 14:45:08 for NumericalMethodsODEs by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

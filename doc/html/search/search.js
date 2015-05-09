@@ -7,12 +7,12 @@
 
 var indexSectionsWithContent =
 {
-  0: "_aefirst",
-  1: "ei",
-  2: "et",
-  3: "aeis",
-  4: "_efs",
-  5: "r",
+  0: "_adefiorst",
+  1: "fio",
+  2: "ot",
+  3: "aefios",
+  4: "_efios",
+  5: "dr",
   6: "t"
 };
 

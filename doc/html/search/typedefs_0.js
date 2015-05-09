@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['realfunc',['realfunc',['../types_8h.html#ace3a1feed10e14042e639a9619476779',1,'types.h']]]
+  ['diff_5fequation',['diff_equation',['../types_8h.html#a83bffc26c6ed4d30b41d0c2558e54b09',1,'types.h']]]
 ];

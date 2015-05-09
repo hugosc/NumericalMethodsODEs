@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['edo_5fsolver',['edo_solver',['../classedo__solver.html',1,'']]]
+  ['forward_5feuler',['forward_euler',['../classforward__euler.html',1,'']]]
 ];

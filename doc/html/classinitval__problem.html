@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -82,6 +83,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="classinitval__problem-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">initval_problem Class Reference</div>  </div>
 </div><!--header-->
@@ -91,16 +96,92 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classinitval__problem.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="types_8h_source.html">types.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a82eeff075b8a06ec3f2cd0b0e1f9bfbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82eeff075b8a06ec3f2cd0b0e1f9bfbf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinitval__problem.html#a82eeff075b8a06ec3f2cd0b0e1f9bfbf">initval_problem</a> (<a class="el" href="types_8h.html#a83bffc26c6ed4d30b41d0c2558e54b09">diff_equation</a> e, std::vector&lt; double &gt; iv, double it)</td></tr>
+<tr class="memdesc:a82eeff075b8a06ec3f2cd0b0e1f9bfbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor <br/></td></tr>
+<tr class="separator:a82eeff075b8a06ec3f2cd0b0e1f9bfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f675139e6f16338fbc05256ba835e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84f675139e6f16338fbc05256ba835e3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinitval__problem.html#a84f675139e6f16338fbc05256ba835e3">initval_problem</a> (<a class="el" href="types_8h.html#a83bffc26c6ed4d30b41d0c2558e54b09">diff_equation</a> e, std::initializer_list&lt; double &gt; iv, double it)</td></tr>
+<tr class="memdesc:a84f675139e6f16338fbc05256ba835e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor with initializer list <br/></td></tr>
+<tr class="separator:a84f675139e6f16338fbc05256ba835e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aa76908a9ec464b95f308cf4a26e77caf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="types_8h.html#a83bffc26c6ed4d30b41d0c2558e54b09">diff_equation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinitval__problem.html#aa76908a9ec464b95f308cf4a26e77caf">equation</a></td></tr>
+<tr class="separator:aa76908a9ec464b95f308cf4a26e77caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af824a153ce1858247ec19f4c4a4c325c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinitval__problem.html#af824a153ce1858247ec19f4c4a4c325c">initial_vals</a></td></tr>
+<tr class="separator:af824a153ce1858247ec19f4c4a4c325c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb70611daaa76a06e69621e009f12b3c"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinitval__problem.html#acb70611daaa76a06e69621e009f12b3c">initial_time</a></td></tr>
+<tr class="separator:acb70611daaa76a06e69621e009f12b3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd81a7f091cd29900c42359d29825df"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classinitval__problem.html#a0dd81a7f091cd29900c42359d29825df">order</a></td></tr>
+<tr class="separator:a0dd81a7f091cd29900c42359d29825df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>class to represent an initial value problem </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>properly define it </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Decide if member order should be removed and allow only first order differential equations </dd></dl>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aa76908a9ec464b95f308cf4a26e77caf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="types_8h.html#a83bffc26c6ed4d30b41d0c2558e54b09">diff_equation</a> initval_problem::equation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ordinary differential equation for the problem </p>
+
+</div>
+</div>
+<a class="anchor" id="acb70611daaa76a06e69621e009f12b3c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double initval_problem::initial_time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>initial time t0 for the problem </p>
+
+</div>
+</div>
+<a class="anchor" id="af824a153ce1858247ec19f4c4a4c325c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;double&gt; initval_problem::initial_vals</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>initial values for the problem </p>
+
+</div>
+</div>
+<a class="anchor" id="a0dd81a7f091cd29900c42359d29825df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int initval_problem::order</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Order of the differential equation </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="types_8h_source.html">types.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 6 2015 19:07:33 for NumericalMethodsODEs by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat May 9 2015 14:45:08 for NumericalMethodsODEs by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

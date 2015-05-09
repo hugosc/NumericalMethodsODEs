@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['second',['second',['../structinterval.html#a585b6ce2ebf058f7b640a1a206138b51',1,'interval']]],
-  ['set_5fstep_5fsize',['set_step_size',['../classedo__solver.html#a88fdf804b54339839941ba98816daed2',1,'edo_solver']]],
-  ['solve',['solve',['../classedo__solver.html#ab9e84eb1d7c2c42f34cfe2629f84b316',1,'edo_solver']]],
-  ['step_5fsize',['step_size',['../classedo__solver.html#a5d608f46fb2a287843667abcddba0444',1,'edo_solver']]]
+  ['ode_5fsolver',['ode_solver',['../classode__solver.html',1,'ode_solver'],['../classode__solver.html#aadfeabf5b9198bfadd1823e0d9b5c242',1,'ode_solver::ode_solver()']]],
+  ['odesolver_2ecpp',['odesolver.cpp',['../odesolver_8cpp.html',1,'']]],
+  ['odesolver_2eh',['odesolver.h',['../odesolver_8h.html',1,'']]],
+  ['operator_28_29',['operator()',['../classode__solver.html#af8520447733254d7eb16275ff7a27322',1,'ode_solver::operator()()'],['../classforward__euler.html#a1184db8c6080aad5eb49651f02292903',1,'forward_euler::operator()()']]],
+  ['order',['order',['../classinitval__problem.html#a0dd81a7f091cd29900c42359d29825df',1,'initval_problem']]]
 ];

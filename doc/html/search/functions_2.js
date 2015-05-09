@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interval',['interval',['../structinterval.html#a0b692512f97e98f2297d32abf8e21ac3',1,'interval']]]
+  ['forward_5feuler',['forward_euler',['../classforward__euler.html#a1f1ef11826a3404f03c5f06aeab382d6',1,'forward_euler']]]
 ];
