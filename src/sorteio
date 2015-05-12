@@ -1,0 +1,22 @@
+000 Forward Euler
+001 Modified Euler
+010 Backward Euler
+011 Runge-Kutta second order
+100 Runge-Kutta third order
+101 Runge-Kutta fourth order
+110 Predictor-Corrector Adams third order
+111 Predictor-Corrector Adams fourth order
+
+
+Andre :
+	Backward Euler
+	Predictor-Corrector Adams third order
+Hugo :
+	Forward Euler
+	Runge-Kutta third order
+Marcos :
+	Modified Euler
+	Runge-Kutta second order
+Vilma :
+	Runge-Kutta fourth order
+	Predictor-Corrector Adams fourth order
