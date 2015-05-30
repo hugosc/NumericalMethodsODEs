@@ -42,7 +42,7 @@ double forward_euler::approx_point(double t, double last_point) {
 double secondorder_rungekutta::approx_point (double t , double last_point) { 
 	auto K1= _step_size*_problem.equation(last_point,t);
 	auto t1 = t + _step_size;
-	auto v1 = last_point + K1;  
+	auto v1 = last_point + K[1];  
 	auto K2 = _step_size*_problem.equation(v1,t1);
 	return last_point + (1/2.0)*(K1+K2);
 }

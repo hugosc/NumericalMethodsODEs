@@ -127,6 +127,6 @@ class secondorder_rungekutta : public ode_solver
 		 * @param last_point last obtained approximation
 		 */
 		double approx_point(double t, double last_point);
-};
+}
 
 #endif //ODESOLVER_H

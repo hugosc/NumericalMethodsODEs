@@ -6,7 +6,7 @@ int main() {
 		return sqrt(y) + x;
 	},{1.0},0);
 	auto method = forward_euler(problem,0.000001);
-	auto method2 = secondorder_rungekutta(problem,0.000001);
+	auto method2 = secondorder_rungekutta(problem,0.1);
 	std::cout << method.solve(interval(0,20)).back().second << std::endl;
 	std::cout << method2.solve(interval(0,20)).back().second << std::endl;
 	return 0;
