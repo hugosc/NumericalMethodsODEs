@@ -30,10 +30,10 @@ int main() {
 	};
 	interval i(0,20);
 	state_type state{{0,1,0,0}};
-	predictor_corrector_3rd<state_type> method;
-//	runge_kutta2nd<state_type> method;
-	auto simulation = solve(method, lambda, state, i, 0.001);
-	for (auto pair : v) {
+//	predictor_corrector_3rd<state_type> method;
+	runge_kutta2nd<state_type> method;
+	auto simulation = solve(method, system, state, i, 0.001);
+	for (auto pair : simulation) {
 		std::cout << "(" << pair.second[0] << "," << pair.second[1] << ")\n";
 	}
 	return 0;
