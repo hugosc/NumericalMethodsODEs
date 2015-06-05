@@ -153,6 +153,47 @@ struct method_traits<runge_kutta3rd<State>> {
 	static const bool is_method = true;
 };
 
+template <class State>
+class runge_kutta4th {
+	public:
+		template <class System>
+		void approx_point(System system, State& state, double curr_time, double step) {
+
+			auto k1 = system(state, curr_time);
+			for (int i = 0; i < state.size(); ++i)
+				k1[i] *= step;
+
+			auto temp = k1;
+			for (int i = 0; i < state.size(); ++i)
+				temp[i] = state[i] + temp[i]/3.0;
+
+			auto k2 = system(temp, curr_time + step/3.0);
+			for (int i = 0; i < state.size(); ++i)
+				k2[i] *= step;
+
+			for (int i = 0; i < state.size(); ++i)
+				temp[i] += k2[i]/3;
+
+			auto k3 = system(temp, curr_time + (2.0/3.0)*step);
+			for (int i = 0; i < state.size(); ++i)
+				k3[i] *= step;
+
+			auto k4 = state;
+			for (int i = 0; i < state.size(); ++i)
+				k4[i] += (k1[i] - k2[i] + k3[i]);
+			k4 = system(k4, curr_time + step);
+
+			for (int i = 0; i < state.size(); ++i)
+				state[i] += (1.0/8.0)*(k1[i] + 3*k2[i] + 3*k3[i] + k4[i]);
+		}
+		inline void cleanup() {}
+};
+
+template <class State>
+struct method_traits<runge_kutta4th<State>> {
+	static const bool is_method = true;
+};
+
 template <class State, class System, class Method>
 std::vector<std::pair<double,State>> solve(Method method, System system, State state, interval i, double step) {
 	static_assert(method_traits<Method>::is_method, "Not a valid method");
