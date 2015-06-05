@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include <vector>
+#include <limits>
 #include <iostream>
 
 template <class State>
@@ -11,6 +12,16 @@ void print_state(const State& state) {
 	for (auto v : state)
 		std::cout << v << " ";
 	std::cout << "]\n";
+}
+
+template <class State>
+double max_diff(const State& a, const State& b) {
+	double d = -1;
+	for (int i = 0; i < a.size(); ++i) {
+		double diff = fabs(a[i] - b[i]);
+		if (diff > d) d = diff;
+	}
+	return d;
 }
 
 template <class Method>
@@ -33,6 +44,56 @@ class forward_euler {
 
 template <class State>
 struct method_traits<forward_euler<State>> {
+	static const bool is_method = true;
+};
+
+template <class State>
+class backward_euler {
+	public:
+		template <class System>
+		void approx_point(System system, State& state, double curr_time, double step) {
+			auto curr_state = state;
+			State prev_state;
+			do {
+				prev_state = curr_state;
+				auto dxdt = system(curr_state, curr_time + step);
+				for (int i = 0; i < state.size(); ++i)
+					curr_state[i] = state[i] + step*dxdt[i];
+			} while (max_diff(curr_state, prev_state) > step);
+			state = curr_state;
+		}
+
+		inline void cleanup() {}
+};
+
+template <class State>
+struct method_traits<backward_euler<State>> {
+	static const bool is_method = true;
+};
+
+
+template <class State>
+class modified_euler {
+	public:
+		template <class System>
+		void approx_point(System system, State& state, double curr_time, double step) {
+			auto curr_state = state;
+			State prev_state;
+			do {
+				prev_state = curr_state;
+				auto dxdt1 = system(curr_state, curr_time + step);
+				auto dxdt2 = system(state, curr_time);
+				for (int i = 0; i < state.size(); ++i)
+					curr_state[i] = state[i] + (step/2.0)*(dxdt1[i] + dxdt2[i]);
+			} while (max_diff(curr_state, prev_state) > step);
+			state = curr_state;
+		}
+
+		inline void cleanup() {}
+};
+
+template <class State>
+struct method_traits<modified_euler<State>> {
 	static const bool is_method = true;
 };
 
