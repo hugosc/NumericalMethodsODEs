@@ -24,14 +24,16 @@ int main() {
 		state_type dxdt(4);
 		dxdt[0] = x[2];
 		dxdt[1] = x[3];
-		dxdt[2] = g - ((b1 + b2)/m1)*x[2] - ((k1 + k2)/m1)*x[0] + (b2/m1)*x[3] + (k2/m1)*x[1]; 
+		dxdt[2] = g - ((b1 + b2)/m1)*x[2] - ((k1 + k2)/m1)*x[0] + (b2/m1)*x[3] + (k2/m1)*x[1];
 		dxdt[3] = g + (b2/m2)*x[2] + (k2/m2)*x[0] - (b2/m2)*x[3] - (k2/m2)*x[1];
 		return dxdt;
 	};
 	interval i(0,20);
 	state_type state{{0,1,0,0}};
 //	predictor_corrector_3rd<state_type> method;
-	runge_kutta2nd<state_type> method;
+//	runge_kutta2nd<state_type> method;
+    predictor_corrector_4th<state_type> method;
+
 	auto simulation = solve(method, system, state, i, 0.001);
 	for (auto pair : simulation) {
 		std::cout << "(" << pair.second[0] << "," << pair.second[1] << ")\n";
