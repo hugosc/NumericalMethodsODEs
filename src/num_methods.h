@@ -110,7 +110,7 @@ class predictor_corrector_3rd {
 				case 1:
 					y1_ = system(state, curr_time);
 					for (int i=0; i<state.size(); i++) {
-						state[i] += step * y1_[i]; 
+						state[i] += step * y1_[i];
 					}
 					iter++;
 					break;
@@ -146,6 +146,66 @@ struct method_traits<predictor_corrector_3rd<State>> {
 	static const bool is_method = true;
 };
 
+//Preditor corretor de quarta ordem
+template <class State>
+class predictor_corrector_4th {
+	public:
+		template <class System>
+		void approx_point(System system, State& state, double curr_time, double step) {
+			switch(iter) {
+				case 0:
+					y0_ = system(state, curr_time);
+					iter++;
+					break;
+				case 1:
+					y1_ = system(state, curr_time);
+					for (int i=0; i<state.size(); i++) {
+						state[i] += step * y1_[i];
+					}
+					iter++;
+					break;
+				case 2:
+					y2_ = system(state, curr_time);
+					for (int i=0; i<state.size(); i++) {
+						state[i] += step * y2_[i];
+					}
+					iter++;
+					break;
+                case 3:
+                    y3_ = system(state, curr_time);
+					for (int i=0; i<state.size(); i++) {
+						state[i] += step * y3_[i];
+					}
+					iter++;
+					break;
+
+				case 4:
+					auto y3 = state;
+					for (int i=0; i<state.size(); i++) {
+						state[i] = y3[i] + (step/24)*(55*y3_[i] - 59*y2_[i] + 37*y1_[i] - 9*y0_[i]);
+					}
+					y0_ = y1_;
+					y1_ = y2_;
+					y2_ = y3_;
+					y3_ = system(state,curr_time);
+					for (int i=0; i<state.size(); i++) {
+						state[i] = y3[i] + (step/24)*(9*y3_[i] + 19*y2_[i] - 5*y1_[i] + y0_[i]);
+					}
+					break;
+			}
+		}
+		inline void cleanup(){iter=0;}
+	private:
+		State y0_, y1_, y2_, y3_;
+		int iter = 0;
+};
+
+template <class State>
+struct method_traits<predictor_corrector_4th<State>> {
+	static const bool is_method = true;
+};
+
+////////////////////////////////////////////////////
 template <class State>
 class runge_kutta2nd {
 	public:
@@ -204,7 +264,7 @@ class runge_kutta3rd {
 				k3[i] *= step;
 
 			for (int i = 0; i < state.size(); ++i)
-				state[i] += (k1[i] + 4*k2[i] + k3[i])/6.0; 
+				state[i] += (k1[i] + 4*k2[i] + k3[i])/6.0;
 		}
 		inline void cleanup() {}
 };

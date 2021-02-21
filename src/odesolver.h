@@ -20,7 +20,7 @@
  */
 class ode_solver {
 	public:
-		constexpr static const double epsilon = std::numeric_limits<double>::epsilon(); /**<constant for machine epsilon used for comparing doubles*/
+		constexpr static /*const*/ double epsilon = std::numeric_limits<double>::epsilon(); /**<constant for machine epsilon used for comparing doubles*/
 		/**
 		 * @brief Class constructor
 		 * @param problem problem to be solved
@@ -30,7 +30,7 @@ class ode_solver {
 		/**
 		 * @brief function to solve the init val problem
 		 * @param time_interval time interval for the solution
-		 * @return vector of pairs (t,y(t)) 
+		 * @return vector of pairs (t,y(t))
 		 * y being the solution to the EDO
 		 * time starts at beggining of interval and increments by step size
 		 * up to the end of the interval, and at each iteration, it makes a call to
@@ -43,10 +43,10 @@ class ode_solver {
 		 * @return real function that is the solution to the problem
 		 */
 		realfunc solution_func();
-		
+
 		/** * @brief setter for _step_size */
 		virtual void set_step_size(double sz);
-		/** 
+		/**
 		* @brief getter for _step_size
 		* @return _step_size
 		*/
@@ -71,7 +71,7 @@ class ode_solver {
 		 * @param x value to apply in the solution function
 		 * @return approximation for y(x)
 		 */
-		double eval(double x);	
+		double eval(double x);
 		/**
 		 * @brief finds an approximation for the solution function
 		 * applied to t
@@ -95,7 +95,7 @@ class forward_euler : public ode_solver {
 		 * @param x value to apply in the solution function
 		 * @return approximation for y(x)
 		 */
-		double operator() (double x) { eval(x); } 
+		double operator() (double x) { eval(x); }
 	protected:
 		/**
 		 * @brief finds an approximation for the solution function
@@ -109,7 +109,7 @@ class forward_euler : public ode_solver {
 
 /**
 *@brief class that inherits the ode_solver interface and implements the second order Runge-Kutta method
-* 
+*
 */
 class secondorder_rungekutta : public ode_solver
 {
@@ -121,7 +121,7 @@ class secondorder_rungekutta : public ode_solver
 		 *  @return  approximation for y(x)*/
 		double operator() (double x) {eval(x);}
 	protected:
-		
+
 		/** @brief finds an approximation for the solution function applied to t
 		 * @param t specific time
 		 * @param last_point last obtained approximation
